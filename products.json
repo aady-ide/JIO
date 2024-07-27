@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name":" 4G ROUTER",
+        "price": 3200,
+        "image": "images/4GR.png",
+        "description": "4G Router is a portable device that allows you to connect to the internet."
+    },
+    {
+        "id": 2,
+        "name":" 5G ROUTER",
+        "price": 2500,
+        "image": "images/5GR.png",
+        "description": "5G Router is a portable device that allows you to connect to the internet."
+         
+    },
+    {
+        "id": 3,
+        "name":" PORTABLE HOTSPOT ROUTER WIFI ANTENNA",
+        "price": 5000,
+        "image": "images/PR.png",
+        "description": "Portable Hotspot Router is a portable device that allows you to connect to the internet."
+    },
+    {
+        "id": 4,
+        "name":" JIO BHARAT",
+        "price": 3500,
+        "image": "images/JB.png",
+        "description": "An affordable yet durable keypad phone with high-quality sound. This feature phone comes with an array of incredible features and colour variants."
+    },
+    {
+        "id": 5,
+        "name":" JIO PHONE PRIMA",
+        "price": 4500,
+        "image": "images/JP.png",
+        "description": "Ideal for those gearing up for the digital life, JioPhone Prima has bold & premium design with apps like Youtube, Facebook and WhatsApp, along with Jio Entertainment Apps. It also has a long-lasting battery and Digital camera."
+    },
+    {
+        "id": 6,
+        "name":" JIO MOTIVE",
+        "price": 3000,
+        "image": "images/JM.png",
+        "description": " A small electronic device that plugs into your car's OBD-ll port and allows you to access valuable information about your vehicle’s health, real-time location, and more."
+    }
+
+]

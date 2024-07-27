@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />    
+</head>
+<body class="">
+    <section class="head-section">
+        <header class="container" style="justify-content: space-evenly;">
+          <nav class="navbar navbar-expand-lg navbar-light penguin-nabbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                <img
+                  src="Images/logo.png"
+                  alt=""
+                  class="penguin-logo img-fluid"
+                />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse justify-content-end"
+                id="navbarNav"
+              >
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="cart.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-us">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact-us">Contact us</a>
+                  </li>
+                </ul>
+              
+              </div>
+            </div>
+                <div class="icon-cart" style="float: inline-end;">
+                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                    </svg>
+                    <span>0</span>
+                </div>
+          </nav>
+        </header>
+      </section>
+    <div class="container">
+        <!-- <header>
+            <div class="title">PRODUCT LIST</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header> -->
+        <div class="listProduct">
+
+        </div>
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+    <!--Footer section-->
+    <section class="footer-section">
+        <div class="container pb-5">
+          <div class="row">
+            <div id="about-us" class="col-sm pe-5 pt-3">
+              <img src="Images/logo.png" alt="" class="penguin-logo img-fluid" />
+              <hr />
+              <p>
+                We are on a mission to digitally empower organisations across sizes, scales, ages, or industries.
+              </p>
+            </div>
+            <div id="contact-us" class="col-sm pe-5 pt-3">
+              <h5>Contact us:</h5>
+              <hr />
+              <p>
+                <i class="fa fa-map-marker fa-1x"> </i>Jio Park Ghansoli, Navi Mumbai, Maharashtra, India.
+              </p>
+              <p>
+                <i class="fa fa-envelope-open"></i>
+                reliance.jio@org
+              </p>
+              <p><i class="fa fa-phone"></i> +911234567890</p>
+            </div>
+            <div class="col-sm pe-5 pt-3">
+              <div>
+                <h5>Get in Touch</h5>
+                <hr />
+                <a href="https://www.facebook.com" target="_blank">
+                  <i class="fa fa-facebook-square fa-2x pe-3"></i>
+              </a>
+              <a href="https://www.twitter.com" target="_blank">
+                  <i class="fa fa-twitter-square fa-2x pe-3"></i>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank">
+                  <i class="fa fa-linkedin fa-2x pe-3"></i>
+              </a>            
+              </div>
+              <div class="pt-5">
+                <h5>Pay with</h5>
+                <hr />
+                <img src="icon/pay.png" class="w-75" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <hr />
+          <p class="text-center">
+            © JIO STORE, VIT,Wadala
+          </p>
+        </footer>
+      </section>
+      <script src="js/bootstrap.min.js"></script>
+
+    <script src="app2.js"></script>
+</body>
+</html>

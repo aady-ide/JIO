@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jost:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      <div class="signup">
+        <form method="post" action="">
+          <label for="chk" aria-hidden="true">Sign Up</label>
+          <input type="text" name="txt" placeholder="User name" required="" />
+          <input type="email" name="email" placeholder="Email" required="" />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Password"
+            required=""
+          />
+          <button>Sign Up</button>
+        </form>
+      </div>
+
+      <div class="login">
+        <form method="post" action="">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" placeholder="Email" required="" />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Password"
+            required=""
+          />
+          <button>Login</button>
+        </form>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+        <script src="https://cdn.rawgit.com/aws/amazon-cognito-identity-js/master/dist/amazon-cognito-identity.min.js"></script>
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+    
+                var authenticationData = {
+                    Username: username,
+                    Password: password,
+                };
+                var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+    
+                var poolData = { 
+                    UserPoolId : 'us-east-1_dJSJ83izd',
+                    ClientId : '51hf5fm4uehf6sh3v1mhlgrte5'
+                };
+                var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+                var userData = {
+                    Username : username,
+                    Pool : userPool
+                };
+                var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+                cognitoUser.authenticateUser(authenticationDetails, {
+                    onSuccess: function (result) {
+                        console.log('Access token: ' + result.getAccessToken().getJwtToken());
+                        alert('Login successful');
+                    },
+                    onFailure: function(err) {
+                        alert(err.message || JSON.stringify(err));
+                    },
+                });
+            });
+        </script>
+
+
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">Login</button>
+    </form>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+    <script src="https://cdn.rawgit.com/aws/amazon-cognito-identity-js/master/dist/amazon-cognito-identity.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            var authenticationData = {
+                Username: username,
+                Password: password,
+            };
+            var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+
+            var poolData = { 
+                UserPoolId : 'us-east-1_dJSJ83izd',
+                ClientId : '51hf5fm4uehf6sh3v1mhlgrte5'
+            };
+            var userPool = new AmazonCognitoIdentity.CognitoUserPool(poolData);
+            var userData = {
+                Username : username,
+                Pool : userPool
+            };
+            var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+            cognitoUser.authenticateUser(authenticationDetails, {
+                onSuccess: function (result) {
+                    console.log('Access token: ' + result.getAccessToken().getJwtToken());
+                    alert('Login successful');
+                },
+                onFailure: function(err) {
+                    alert(err.message || JSON.stringify(err));
+                },
+            });
+        });
+    </script>
+</body>
+</html> -->
